@@ -6,7 +6,9 @@ export const HeroLayout = () => {
     <>
       <Navbar />
 
-      <Outlet />
+      <main className="w-11/12 max-w-7xl mx-auto">
+        <Outlet />
+      </main>
     </>
   )
 }
