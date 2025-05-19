@@ -5,6 +5,7 @@ import { LoginLayout, LoginPage } from "../auth";
 export const AppRouter = () => {
   return (
     <Routes>
+
       <Route element={<LoginLayout />}>
         <Route index path="login" element={<LoginPage />} />
       </Route>

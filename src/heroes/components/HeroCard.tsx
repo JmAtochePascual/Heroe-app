@@ -9,7 +9,7 @@ export const HeroCard = ({ hero }: HeroCardProps) => {
   const { id, superhero, alter_ego, publisher, first_appearance } = hero;
 
   return (
-    <div className="w-full h-full grid grid-cols-[100px_1fr] border border-gray-200 rounded-md overflow-hidden">
+    <div className="grid grid-cols-[100px_1fr] border border-gray-200 rounded-md overflow-hidden">
       <img
         src={`${id}.jpg`}
         alt={superhero}

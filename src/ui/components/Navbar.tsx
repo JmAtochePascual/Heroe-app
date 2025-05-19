@@ -28,12 +28,6 @@ export const Navbar = () => {
             className={({ isActive }) => `${isActive ? 'text-white font-semibold' : 'text-gray-300'}`} >
             Search
           </NavLink>
-
-          <NavLink
-            to="/login"
-            className={({ isActive }) => `${isActive ? 'text-white font-semibold' : 'text-gray-300'}`} >
-            Login
-          </NavLink>
         </div>
 
         <div className="lex items-center gap-2">

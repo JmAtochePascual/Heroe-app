@@ -1,5 +1,5 @@
 import { Navigate, useNavigate, useParams } from "react-router";
-import { getHeroesById } from "../helper/getHeroesById";
+import { getHeroesById } from "../helper";
 import { useMemo } from "react";
 import "animate.css";
 
