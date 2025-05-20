@@ -5,14 +5,10 @@ export type AuthAction =
 
 export type AuthState = {
   isLoggedIn: boolean;
-  user: string | null;
+  user: string;
 };
 
-
-export const initialState: AuthState = {
-  isLoggedIn: false,
-  user: null
-};
+export const initialState: AuthState = JSON.parse(localStorage.getItem('authState') || '{}');
 
 export const AuthReducer = (state: AuthState = initialState, action: AuthAction) => {
 
@@ -22,13 +18,13 @@ export const AuthReducer = (state: AuthState = initialState, action: AuthAction)
       isLoggedIn: true,
       user: action.payload
     };
-  }
+  };
 
   if (action.type === 'logout') {
     return {
       ...state,
       isLoggedIn: false,
-      user: null
+      user: ''
     };
   }
 
