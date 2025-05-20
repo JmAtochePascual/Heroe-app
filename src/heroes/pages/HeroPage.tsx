@@ -17,7 +17,7 @@ export const HeroPage = () => {
   return (
     <div className="w-full max-w-lg h-56 grid grid-cols-[100px_1fr] border border-gray-200 rounded-md overflow-hidden md:h-96 md:grid-cols-[150px_1fr] lg:grid-cols-[200px_1fr]">
       <img
-        src={`/${id}.jpg`}
+        src={`${id}.jpg`}
         alt={superhero}
         className="w-full h-full object-cover animate__fadeInLeft animate__animated" />
 
