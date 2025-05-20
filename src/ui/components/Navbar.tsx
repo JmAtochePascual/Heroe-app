@@ -1,9 +1,12 @@
 import { NavLink, useNavigate } from "react-router"
+import { useAuth } from "../../auth/hook/useAuth";
 
 export const Navbar = () => {
   const navigate = useNavigate();
+  const { state, onLogout } = useAuth();
 
-  const onLogout = () => {
+  const handleLogout = () => {
+    onLogout();
     navigate('/login', { replace: true });
   };
 
@@ -30,9 +33,13 @@ export const Navbar = () => {
           </NavLink>
         </div>
 
-        <div className="lex items-center gap-2">
+        <div className="flex items-center gap-2">
+          <p className="text-sm text-white">
+            {state.user}
+          </p>
+
           <button
-            onClick={onLogout}
+            onClick={handleLogout}
             className="w-full px-4 py-1 rounded-md cursor-pointer text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-300">
             Logout
           </button>

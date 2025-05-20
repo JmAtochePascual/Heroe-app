@@ -8,5 +8,5 @@ export const HeroApp = () => {
         <AppRouter />
       </AuthProvider>
     </>
-  )
-}
+  );
+};

@@ -9,10 +9,19 @@ interface AuthProviderProps {
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [state, dispatch] = useReducer(AuthReducer, initialState);
 
+  const onLogin = (name: string) => {
+    dispatch({ type: 'login', payload: name });
+  };
+
+  const onLogout = () => {
+    dispatch({ type: 'logout' });
+  };
+
   return (
     <AuthContext.Provider value={{
       state,
-      dispatch
+      onLogin,
+      onLogout
     }}>
       {children}
     </AuthContext.Provider>

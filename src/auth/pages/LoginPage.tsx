@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router";
+import { useAuth } from "../hook/useAuth";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
+  const { onLogin } = useAuth();
 
-  const onLogin = () => {
+  const handleLogin = () => {
+    onLogin('JMCode');
     navigate('/', { replace: true });
   };
 
@@ -13,7 +16,7 @@ export const LoginPage = () => {
       <hr className="mb-8" />
 
       <button
-        onClick={onLogin}
+        onClick={handleLogin}
         className="w-full px-4 py-1 rounded-md cursor-pointer text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-300">
         Login
       </button>
