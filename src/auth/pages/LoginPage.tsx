@@ -7,7 +7,7 @@ export const LoginPage = () => {
 
   const handleLogin = () => {
     onLogin('JMCode');
-    navigate('/', { replace: true });
+    navigate(localStorage.getItem('lastPath') || '/', { replace: true });
   };
 
   return (
