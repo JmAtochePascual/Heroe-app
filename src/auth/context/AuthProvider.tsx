@@ -10,8 +10,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [state, dispatch] = useReducer(AuthReducer, initialState);
 
   const onLogin = (name: string) => {
-    localStorage.setItem('authState', JSON.stringify({ isLoggedIn: true, user: name }));
     dispatch({ type: 'login', payload: name });
+    localStorage.setItem('authState', JSON.stringify({ isLoggedIn: true, user: name }));
   };
 
   const onLogout = () => {
@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     <AuthContext.Provider value={{
       state,
       onLogin,
-      onLogout
+      onLogout,
     }}>
       {children}
     </AuthContext.Provider>
