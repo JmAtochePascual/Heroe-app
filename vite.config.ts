@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/Heroe-app',
+  base: '/Heroe-app/',
 })
