@@ -8,7 +8,6 @@ export const HeroLayout = () => {
   const { pathname, search } = useLocation();
   const lastPath = `${pathname}${search}`;
   localStorage.setItem('lastPath', lastPath);
-  console.log(lastPath);
 
   if (!state.isLoggedIn) return <Navigate to="/login" />;
 
