@@ -18,6 +18,7 @@ export const AppRouter = () => {
       </Route>
 
       <Route path="/*" element={<Navigate to="marvel" />} />
+
     </Routes>
   );
 };

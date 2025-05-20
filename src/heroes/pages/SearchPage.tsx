@@ -50,7 +50,7 @@ export const SearchPage = () => {
           heroes.length === 0
             ?
             <div className="p-2 text-center text-gray-400">
-              No hay resultados...
+              No hay resultados o coincidencias...
             </div>
             :
             <div className="grid [grid-template-columns:repeat(auto-fill,minmax(300px,1fr))] [grid-auto-rows:200px] gap-4">
